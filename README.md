@@ -15,3 +15,15 @@ We introduce See\&Trek, the first training-free prompting framework tailored to 
 
 <img width="986" height="306" alt="image" src="https://github.com/user-attachments/assets/7e3cc84c-63fc-4ee0-9158-62daa887c40b" />
 
+## Citation
+
+If you think your work is usefull, please cite our work, I appreciate that. 
+
+```
+@article{li2025see,
+  title={See\&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model},
+  author={Li, Pengteng and Song, Pinhao and Li, Wuyang and Guo, Weiyu and Yao, Huizai and Xu, Yijie and Liu, Dugang and Xiong, Hui},
+  journal={arXiv preprint arXiv:2509.16087},
+  year={2025}
+}
+```
