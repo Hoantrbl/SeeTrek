@@ -17,7 +17,7 @@ We introduce See\&Trek, the first training-free prompting framework tailored to 
 
 ## Citation
 
-If you think your work is usefull, please cite our work, I appreciate that. 
+If you think our work is usefull, please cite our work, I appreciate that. 
 
 ```
 @article{li2025see,
