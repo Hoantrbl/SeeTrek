@@ -1,0 +1,149 @@
+Metadata-Version: 2.4
+Name: lmms_eval
+Version: 0.2.3
+Summary: A framework for evaluating large multi-modality language models
+Author-email: LMMMs-Lab Evaluation Team <lmms-lab@outlook.com>
+License: MIT
+Project-URL: Homepage, https://lmms-lab.github.io
+Project-URL: Repository, https://github.com/EvolvingLMMs-Lab/lmms-eval
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: accelerate>=0.29.1
+Requires-Dist: black==24.1.0
+Requires-Dist: isort==5.13.2
+Requires-Dist: datasets==2.16.1
+Requires-Dist: evaluate>=0.4.0
+Requires-Dist: httpx==0.23.3
+Requires-Dist: jsonlines
+Requires-Dist: numexpr
+Requires-Dist: numpy==1.26.4
+Requires-Dist: peft>=0.2.0
+Requires-Dist: pybind11>=2.6.2
+Requires-Dist: pytablewriter
+Requires-Dist: sacrebleu>=1.5.0
+Requires-Dist: scikit-learn>=0.24.1
+Requires-Dist: sqlitedict==2.1.0
+Requires-Dist: torch>=2.1.0
+Requires-Dist: torchvision>=0.16.0
+Requires-Dist: timm
+Requires-Dist: einops
+Requires-Dist: ftfy
+Requires-Dist: openai
+Requires-Dist: opencv-python-headless
+Requires-Dist: av
+Requires-Dist: hf_transfer
+Requires-Dist: nltk
+Requires-Dist: sentencepiece==0.1.99
+Requires-Dist: yt-dlp
+Requires-Dist: pycocoevalcap
+Requires-Dist: tqdm-multiprocess
+Requires-Dist: transformers-stream-generator
+Requires-Dist: zstandard
+Requires-Dist: pillow
+Requires-Dist: pyyaml
+Requires-Dist: sympy
+Requires-Dist: mpmath
+Requires-Dist: Jinja2
+Requires-Dist: openpyxl
+Requires-Dist: loguru
+Requires-Dist: hf_transfer
+Requires-Dist: tenacity==8.3.0
+Requires-Dist: wandb>=0.16.0
+Requires-Dist: tiktoken
+Requires-Dist: pre-commit
+Requires-Dist: pydantic
+Requires-Dist: packaging
+Requires-Dist: decord
+Requires-Dist: zss
+Requires-Dist: protobuf==3.20
+Provides-Extra: metrics
+Requires-Dist: pywsd; extra == "metrics"
+Requires-Dist: spacy; extra == "metrics"
+Requires-Dist: anls; extra == "metrics"
+Requires-Dist: rouge; extra == "metrics"
+Requires-Dist: capture_metric; extra == "metrics"
+Requires-Dist: Levenshtein; extra == "metrics"
+Provides-Extra: llava-next
+Requires-Dist: deepspeed; extra == "llava-next"
+Provides-Extra: vila
+Requires-Dist: s2wrapper@ git+https://github.com/bfshi/scaling_on_scales ; extra == "vila"
+Provides-Extra: gemini
+Requires-Dist: google-generativeai; extra == "gemini"
+Provides-Extra: reka
+Requires-Dist: httpx==0.23.3; extra == "reka"
+Requires-Dist: reka-api; extra == "reka"
+Provides-Extra: all
+Requires-Dist: llava_next; extra == "all"
+Requires-Dist: vila; extra == "all"
+Requires-Dist: gemini; extra == "all"
+Requires-Dist: reka; extra == "all"
+Dynamic: license-file
+
+# SeeTrek
+The offcial code base of *See&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model*
+
+🚀 Our paper has been accepted by Neurips 2025.
+
+<img width="986" height="306" alt="image" src="https://github.com/user-attachments/assets/7e3cc84c-63fc-4ee0-9158-62daa887c40b" />
+
+# Install
+
+Please directly follow the [VSI-Benchmark](https://github.com/vision-x-nyu/thinking-in-space) official instruction.
+
+```cmd
+conda create --name vsibench python=3.10
+conda activate vsibench
+
+git clone git@github.com:vision-x-nyu/thinking-in-space.git
+cd thinking-in-space
+
+git submodule update --init --recursive
+
+cd transformers && pip install -e . && cd ..
+
+pip install -e .
+pip install s2wrapper@git+https://github.com/bfshi/scaling_on_scales
+pip install deepspeed
+```
+
+Note that we utilize `transformers==4.52.0, lmms_eval==0.2.3, torch==2.6.0, torchvision==0.21.0`
+
+
+Then you need to install the [Ultralytics Yolo](https://github.com/ultralytics/ultralytics):
+
+```cmd
+pip install ultralytics
+```
+
+# Run
+
+First you need to generate the prior semantics about given video:
+
+```cmd
+python /home/yijiexu/lipengteng/SeeTrek/tools/multi-proc-video-skip.py
+```
+all prior semantics would be processed and saved on the local dir. 
+
+Then, you can run the following command to get the final results:
+
+```cmd
+bash evaluate_only_one.sh
+```
+
+
+# Citation
+
+If you think our work is usefull, please cite our work, I appreciate that. 
+
+```
+@article{li2025see,
+  title={See\&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model},
+  author={Li, Pengteng and Song, Pinhao and Li, Wuyang and Guo, Weiyu and Yao, Huizai and Xu, Yijie and Liu, Dugang and Xiong, Hui},
+  journal={arXiv preprint arXiv:2509.16087},
+  year={2025}
+}
+```

@@ -1,0 +1,12 @@
+[submodule "LLaVA-NeXT"]
+	path = LLaVA-NeXT
+	url = git@github.com:LLaVA-VL/LLaVA-NeXT.git
+[submodule "LongVA"]
+	path = LongVA
+	url = git@github.com:EvolvingLMMs-Lab/LongVA.git
+[submodule "VILA"]
+	path = VILA
+	url = git@github.com:NVlabs/VILA.git
+[submodule "transformers"]
+	path = transformers
+	url = git@github.com:huggingface/transformers.git
