@@ -1,9 +1,10 @@
-# SeeTrek
+# See&Trek
 
-> **Training-Free Spatial Prompting for Multimodal Large Language Models**
+> **See&Trek: Training-Free Spatial Prompting for Multimodal Large Language Models**
 
 <p align="left">
   <img src="https://img.shields.io/badge/NeurIPS-2025-8A2BE2.svg"/>
+  <img src="https://img.shields.io/badge/arXiv-2509.16087-b31b1b.svg"/>
   <img src="https://img.shields.io/badge/Status-Available-brightgreen"/>
   <img src="https://img.shields.io/badge/License-MIT-blue"/>
 </p>
@@ -72,7 +73,7 @@ pip install ultralytics
 
 ---
 
-# 🚀 Running SeeTrek
+# 🚀 Running See&Trek
 
 ## 1️⃣ Generate Prior Semantics
 
@@ -98,7 +99,7 @@ We also provide **preprocessed prior semantics** on Google Drive:
 
 ## 2️⃣ Run Evaluation
 
-Place model checkpoints (e.g., InternVL3-8B) into `checkpoint-local`
+Place model checkpoints (e.g., `InternVL3-Series`) into `checkpoint-local`
 and update paths in `evaluate.sh`.
 
 Then run:
