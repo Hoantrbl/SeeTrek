@@ -1,0 +1,18 @@
+=== Performance Report ===
+Total samples: 2046
+Overall accuracy: 31.09%
+
+Accuracy by task:
+  Pose Estimation: 42.70%
+  Speed & Acceleration: 35.38%
+  3D Video Grounding: 34.07%
+  Ego-Centric Orientation: 27.87%
+  Dimensional Measurement: 26.74%
+  Spatial Relation: 26.39%
+  Trajectory Description: 26.32%
+  Displacement & Path Length: 21.01%
+
+Accuracy by scene:
+  outdoor: 34.75%
+  desktop: 29.21%
+  indoor: 28.67%
